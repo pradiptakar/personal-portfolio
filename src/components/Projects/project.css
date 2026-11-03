@@ -23,4 +23,5 @@
     background: linear-gradient(to right, rgb(203, 53, 108),white);
     background-clip: text;
     color: transparent;
+    text-align: center;
 }
