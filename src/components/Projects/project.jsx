@@ -13,8 +13,6 @@ function project() {
              <Card title="VIRTUAL ASSISTANT" image={va}/>
              <Card title="AI POWERED FISTNESS WEBSITE" image={fw}/>
              <Card title="AI CHAT BOT" image={chatbot2}/>
-             <Card title="AI TEXT TO IMAGE"/>
-             <Card title="AI BACKGROUND REMOVER"/>
         </div>
     </div>
   )
