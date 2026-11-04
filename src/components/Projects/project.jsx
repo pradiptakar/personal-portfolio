@@ -4,8 +4,45 @@ import "./project.css"
 import va from "../../assets/va.png"
 import fw from "../../assets/fw.png"
 import chatbot2 from "../../assets/chatbot2.jpg"
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
 
 function project() {
+
+  useGSAP(()=>{
+    gsap.from("#para",{
+      y:100,
+      duration:1,
+      opacity:0,
+      stagger:1,
+      scrollTrigger:{
+        trigger:"#para",
+        scroll:"body",
+        scrub:2,
+        start:"top 80%",
+        end:"top 30%"
+      }
+    })
+     
+    gsap.from(".slider",{
+      y:100,
+      duration:1,
+      opacity:0,
+      stagger:1,
+      scrollTrigger:{
+        trigger:".slider",
+        scroll:"body",
+        scrub:2,
+        start:"top 60%",
+        end:"top 30%"
+      }
+    })
+
+
+  })
+  
   return (
     <div id="projects">
         <h1 id="para">1 YEARS EXPERIENCED IN PROJERCTS</h1>

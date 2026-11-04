@@ -2,7 +2,8 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import "./Home.css"
 import women from "../../assets/women.jpeg"
-
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap'
 
 const WORDS = ["WEB DEVELOPER", "SOFTWARE DEVELOPER"];
 
@@ -41,6 +42,30 @@ function useTypingEffect(words, typingSpeed = 100, deletingSpeed = 50) {
 
 
 function Home(){
+
+  useGSAP(()=>{
+    let tl1 = gsap.timeline()
+    tl1.from(".line1",{
+      y:80,
+      duration:1,
+      opacity:0
+  })
+  tl1.from(".line2",{
+      y:80,
+      duration:1,
+      opacity:0
+  })
+  tl1.from(".line3",{
+      y:80,
+      duration:1,
+      opacity:0
+  })
+  gsap.from(".righthome img",{
+    x:200,
+    duration:1,
+    opacity:0
+  })
+  })
 
 const typedText = useTypingEffect(WORDS, 150 , 100);
 
